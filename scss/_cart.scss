@@ -1,0 +1,109 @@
+section {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 9px;
+  background: rgba($color: #fff, $alpha: 0.98);
+  padding: 1rem;
+}
+
+.cart-and-total-container {
+  display: flex;
+}
+
+.cart-container {
+  flex-basis: 80%;
+}
+
+.total-container {
+  flex-basis: 20%;
+}
+
+.total {
+  box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+
+.total-sum {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.select_all {
+  cursor: pointer;
+}
+
+$border-item: 1px solid rgba(0, 0, 0, 0.4);
+$border-hor: 1px solid #000;
+
+.cart-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: $border-item;
+
+  &:last-child {
+    border-bottom: $border-item;
+  }
+}
+
+.media-img {
+  height: 80%;
+  object-fit: contain;
+}
+
+.cart-item-body {
+  border-left: $border-hor;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.cart-item-title {
+  @extend %card-and-modal-tittle;
+  font-size: 1.5rem;
+}
+
+.cart-item-state {
+  font-size: 1rem;
+}
+
+.cart-item-price {
+  color: $card-price-text-color;
+  font-weight: bold;
+}
+
+input[name^="number_"] {
+  width: 4rem;
+}
+
+.cart-item-delete {
+  color: blue;
+  cursor: pointer;
+}
+
+.cart-item-delete:hover {
+  text-decoration: underline;
+}
+
+.cart-item-save {
+  color: blue;
+  cursor: pointer;
+}
+
+.cart-item-save:hover {
+  text-decoration: underline;
+}
+
+.vert-line {
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid black;
+  margin: 0 0.5rem;
+}
+
+.btn-buy {
+  min-width: 5rem;
+  color: $card-text-color;
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet shop</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f9739dcf32.js"
+      crossorigin="anonymous"
+    ></script>
+    <link type="text/css" rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- md and greater navbar -->
+    <header class="navbar-top">
+      <nav class="navbar navbar-dark justify-content-around d-none d-md-flex">
+        <div>
+          <a class="navbar-toggler" data-toggle="collapse" href="#catalogMenu">
+            <img src="img/catalog.svg" class="navbar-icon" alt="catalog-icon" />
+          </a>
+        </div>
+
+        <div class="d-inline-flex align-items-center">
+          <a href="#">
+            <img src="img/home.svg" class="navbar-icon" alt="home-icon" />
+          </a>
+          <span class="navbar-text active ml-3"> Internet shop </span>
+        </div>
+
+        <form class="form-inline w-50">
+          <input
+            type="search"
+            name="item-search"
+            id="search"
+            class="form-control mr-md-1 mr-lg-2 flex-grow-1"
+            placeholder="Search"
+            title="search-item"
+          />
+          <button type="submit" class="btn btn-outline-success">
+            <img src="img/search.svg" class="navbar-icon" alt="search-icon" />
+          </button>
+        </form>
+
+        <div>
+          <a href="login.html">
+            <img src="img/login.svg" class="navbar-icon" alt="login-icon" />
+          </a>
+        </div>
+
+        <div>
+          <a href="cart.html">
+            <img src="img/cart.svg" class="navbar-icon" alt="cart-icon" />
+          </a>
+        </div>
+      </nav>
+      <!-- Catalog menu collapsing -->
+      <div class="collapse catalog-menu-container" id="catalogMenu">
+        <div class="row d-none d-md-flex">
+          <div class="col">
+            <ul class="ml-2 catalog-menu">
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- xs, sm navbar -->
+      <nav class="navbar navbar-dark d-md-none justify-content-center">
+        <div class="navbar-brand">Internet shop</div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- carousel -->
+      <div class="container mb-4">
+        <div
+          class="carousel slide carousel-fade"
+          id="carouselShop"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselShop"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselShop" data-slide-to="1"></li>
+            <li data-target="#carouselShop" data-slide-to="2"></li>
+            <li data-target="#carouselShop" data-slide-to="3"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/carousel-1.jpeg"
+                class="display-block carousel-img"
+                alt=""
+              />
+              <div class="carousel-caption">
+                <h5>Wide choice!</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/carousel-2.jpg"
+                class="display-block carousel-img"
+                alt=""
+              />
+              <div class="carousel-caption">
+                <h5>Only fresh!</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/carousel-3.jpg"
+                class="display-block carousel-img"
+                alt=""
+              />
+              <div class="carousel-caption">
+                <h5>Healthy food!</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/carousel-4.jpg"
+                class="display-block carousel-img"
+                alt=""
+              />
+              <div class="carousel-caption">
+                <h5>Buy what you want for great prices!</h5>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselShop"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselShop"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- cards of items -->
+      <div class="container-fluid card-container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img
+                data-toggle="modal"
+                data-item="tomato"
+                data-target="#full-card"
+                class="card-img-top"
+                src="img/card-img-1.jpg"
+                alt="Tomatoes"
+              />
+              <div class="card-body text-center">
+                <p class="card-title">Tomatoes</p>
+                <button
+                  type="button"
+                  class="btn btn-outline-info card-btn"
+                  data-toggle="modal"
+                  data-item="tomato"
+                  data-target="#full-card"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                data-toggle="modal"
+                data-item="grill"
+                data-target="#full-card"
+                src="img/card-img-2.jpg"
+                alt="Grill"
+              />
+              <div class="card-body text-center">
+                <p class="card-title">Grill</p>
+                <button
+                  type="button"
+                  class="btn btn-outline-info card-btn"
+                  data-toggle="modal"
+                  data-item="grill"
+                  data-target="#full-card"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                data-toggle="modal"
+                data-item="cake"
+                data-target="#full-card"
+                src="img/card-img-3.jpg"
+                alt="Cake"
+              />
+              <div class="card-body text-center">
+                <p class="card-title">Cake</p>
+                <button
+                  type="button"
+                  class="btn btn-outline-info card-btn"
+                  data-toggle="modal"
+                  data-item="cake"
+                  data-target="#full-card"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                data-toggle="modal"
+                data-item="coconute"
+                data-target="#full-card"
+                src="img/card-img-4.jpg"
+                alt="Coconute"
+              />
+              <div class="card-body text-center">
+                <p class="card-title">Coconute</p>
+                <button
+                  type="button"
+                  class="btn btn-outline-info card-btn"
+                  data-toggle="modal"
+                  data-item="coconute"
+                  data-target="#full-card"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                data-toggle="modal"
+                data-item="dianella"
+                data-target="#full-card"
+                src="img/card-img-5.jpg"
+                alt="Dianella"
+              />
+              <div class="card-body text-center">
+                <p class="card-title">Dianella</p>
+                <button
+                  type="button"
+                  class="btn btn-outline-info card-btn"
+                  data-toggle="modal"
+                  data-item="dianella"
+                  data-target="#full-card"
+                >
+                  More info
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="full-card">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img
+                class="full-card-img-top"
+                src="img/card-img-1.jpg"
+                alt="Tomato"
+              />
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <p class="full-card-title">
+                <span class="full-card-title-name">Capsicums</span>
+                <span class="full-card-weight">1 kilo</span>
+              </p>
+              <p class="full-card-state">In stock</p>
+              <p class="full-card-price">
+                &dollar; <span class="full-card-price-count">17.00</span>
+              </p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-warning full-card-buy">
+                In cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-3 text-center">
+            <p class="footer-col-title">Customers</p>
+            <p>How to make order</p>
+            <p>How to get order</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 text-center">
+            <p class="footer-col-title">About us</p>
+            <p>Contacts</p>
+            <p>Press-center</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <p class="footer-col-title text-center">Social media</p>
+            <div class="social-media">
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+              </div>
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-instagram fa-2x instagram-color"></i>
+                </a>
+              </div>
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+              </div>
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-youtube fa-2x youtube-color"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="apps-stores">
+              <p class="footer-col-title">Mobile devices</p>
+              <div>
+                <a href="#">
+                  <img src="img/google-play.svg" alt="google-play_icon" />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img src="img/apple-store.svg" alt="apple-store_icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="position-sticky text-center d-flex justify-content-around py-1"
+      >
+        <span>&copy; MyShop</span> <span>Have a nice shopping!</span>
+      </div>
+    </footer>
+  </body>
+</html>

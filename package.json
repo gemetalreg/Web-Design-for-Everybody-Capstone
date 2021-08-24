@@ -1,0 +1,17 @@
+{
+  "name": "course5_capstone",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew",
+  "license": "ISC"
+}

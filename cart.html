@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet shop</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f9739dcf32.js"
+      crossorigin="anonymous"
+    ></script>
+    <link type="text/css" rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- md and greater navbar -->
+    <header class="navbar-top">
+      <nav class="navbar navbar-dark justify-content-around d-none d-md-flex">
+        <div>
+          <a class="navbar-toggler" data-toggle="collapse" href="#catalogMenu">
+            <img src="img/catalog.svg" class="navbar-icon" alt="catalog-icon" />
+          </a>
+        </div>
+
+        <div class="d-inline-flex align-items-center">
+          <a href="index.html">
+            <img src="img/home.svg" class="navbar-icon" alt="home-icon" />
+          </a>
+          <span class="navbar-text active ml-3"> Internet shop </span>
+        </div>
+
+        <form class="form-inline w-50">
+          <input
+            type="search"
+            name="item-search"
+            id="search"
+            class="form-control mr-md-1 mr-lg-2 flex-grow-1"
+            placeholder="Search"
+            title="search-item"
+          />
+          <button type="submit" class="btn btn-outline-success">
+            <img src="img/search.svg" class="navbar-icon" alt="search-icon" />
+          </button>
+        </form>
+
+        <div>
+          <a href="login.html">
+            <img src="img/login.svg" class="navbar-icon" alt="login-icon" />
+          </a>
+        </div>
+
+        <div>
+          <a href="#">
+            <img src="img/cart.svg" class="navbar-icon" alt="cart-icon" />
+          </a>
+        </div>
+      </nav>
+      <!-- Catalog menu collapsing -->
+      <div class="collapse catalog-menu-container" id="catalogMenu">
+        <div class="row d-none d-md-flex">
+          <div class="col">
+            <ul class="ml-2 catalog-menu">
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="text-dark catalog-menu-link" href="#">Label</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- xs, sm navbar -->
+      <nav class="navbar navbar-dark d-md-none justify-content-center">
+        <div class="navbar-brand">Internet shop</div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container cart-and-total-container">
+        <div class="px-3 cart-container">
+          <h1>Shopping cart</h1>
+          <p><a class="select_all">Select all</a></p>
+
+          <ul class="list-unstyled cart">
+            <li class="media cart-item">
+              <input
+                type="checkbox"
+                name="item_in_cart"
+                id="check_1"
+                class="mr-3 align-self-center item_check"
+                checked
+              />
+              <img
+                src="img/cart/Item_1.jpg"
+                class="mr-3 align-self-center media-img"
+                alt="Potato"
+              />
+              <div class="media-body cart-item-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="cart-item-info">
+                    <p class="mt-0 mb-1 cart-item-title">
+                      <span class="cart-item-name">Potato</span>
+                      <span class="cart-item-weight">1 kilo</span>
+                    </p>
+                    <p class="cart-item-state text-success">In stock</p>
+                  </div>
+                  <div class="number">
+                    <input
+                      type="number"
+                      name="number_1"
+                      id="number_1"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+
+                  <p class="cart-item-price">
+                    &dollar; <span class="full-card-price-count">17.00</span>
+                  </p>
+                </div>
+                <div>
+                  <span class="cart-item-delete">Delete</span>
+                  <span class="vert-line"></span>
+                  <span class="cart-item-save">Save for later</span>
+                </div>
+              </div>
+            </li>
+            <li class="media cart-item">
+              <input
+                type="checkbox"
+                name="item_in_cart"
+                id="check_2"
+                class="mr-3 align-self-center item_check"
+                checked
+              />
+              <img
+                src="img/cart/Item_2.jpg"
+                class="mr-3 align-self-center media-img"
+                alt="Coffee"
+              />
+              <div class="media-body cart-item-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="cart-item-info">
+                    <p class="mt-0 mb-1 cart-item-title">
+                      <span class="cart-item-name">Coffee</span>
+                      <span class="cart-item-weight">1 kilo</span>
+                    </p>
+                    <p class="cart-item-state text-success">In stock</p>
+                  </div>
+                  <div class="number">
+                    <input
+                      type="number"
+                      name="number_2"
+                      id="number_2"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+
+                  <p class="cart-item-price">
+                    &dollar; <span class="full-card-price-count">17.00</span>
+                  </p>
+                </div>
+                <div>
+                  <span class="cart-item-delete">Delete</span>
+                  <span class="vert-line"></span>
+                  <span class="cart-item-save">Save for later</span>
+                </div>
+              </div>
+            </li>
+            <li class="media cart-item">
+              <input
+                type="checkbox"
+                name="item_in_cart"
+                id="check_3"
+                class="mr-3 align-self-center item_check"
+                checked
+              />
+              <img
+                src="img/cart/Item_3.jpg"
+                class="mr-3 align-self-center media-img"
+                alt="Orange"
+              />
+              <div class="media-body cart-item-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="cart-item-info">
+                    <p class="mt-0 mb-1 cart-item-title">
+                      <span class="cart-item-name">Orange</span>
+                      <span class="cart-item-weight">1 kilo</span>
+                    </p>
+                    <p class="cart-item-state text-success">In stock</p>
+                  </div>
+                  <div class="number">
+                    <input
+                      type="number"
+                      name="number_3"
+                      id="number_3"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+
+                  <p class="cart-item-price">
+                    &dollar; <span class="full-card-price-count">17.00</span>
+                  </p>
+                </div>
+                <div>
+                  <span class="cart-item-delete">Delete</span>
+                  <span class="vert-line"></span>
+                  <span class="cart-item-save">Save for later</span>
+                </div>
+              </div>
+            </li>
+            <li class="media cart-item">
+              <input
+                type="checkbox"
+                name="item_in_cart"
+                id="check_4"
+                class="mr-3 align-self-center item_check"
+                checked
+              />
+              <img
+                src="img/cart/Item_4.jpg"
+                class="mr-3 align-self-center media-img"
+                alt="Banana Bread Flapjacks"
+              />
+              <div class="media-body cart-item-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="cart-item-info">
+                    <p class="mt-0 mb-1 cart-item-title">
+                      <span class="cart-item-name">Banana Bread Flapjacks</span>
+                      <span class="cart-item-weight">1 kilo</span>
+                    </p>
+                    <p class="cart-item-state text-success">In stock</p>
+                  </div>
+                  <div class="number">
+                    <input
+                      type="number"
+                      name="number_4"
+                      id="number_4"
+                      min="1"
+                      value="1"
+                    />
+                  </div>
+
+                  <p class="cart-item-price">
+                    &dollar; <span class="full-card-price-count">17.00</span>
+                  </p>
+                </div>
+                <div>
+                  <span class="cart-item-delete">Delete</span>
+                  <span class="vert-line"></span>
+                  <span class="cart-item-save">Save for later</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="total-container">
+          <div class="d-flex flex-column align-items-center total">
+            <p>
+              Total sum (<span class="total-items-count">0</span> positions):
+            </p>
+            <p class="text-center">
+              <span class="total-sum">
+                &dollar; <span class="total-sum-value">0.00</span>
+              </span>
+            </p>
+            <div class="">
+              <button type="button" class="btn btn-warning btn-buy">Buy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-3 text-center">
+            <p class="footer-col-title">Customers</p>
+            <p>How to make order</p>
+            <p>How to get order</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3 text-center">
+            <p class="footer-col-title">About us</p>
+            <p>Contacts</p>
+            <p>Press-center</p>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <p class="footer-col-title text-center">Social media</p>
+            <div class="social-media">
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+              </div>
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-instagram fa-2x instagram-color"></i>
+                </a>
+              </div>
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+              </div>
+              <div class="social-media-item">
+                <a href="#">
+                  <i class="fab fa-youtube fa-2x youtube-color"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <div class="apps-stores">
+              <p class="footer-col-title">Mobile devices</p>
+              <div>
+                <a href="#">
+                  <img src="img/google-play.svg" alt="google-play_icon" />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img src="img/apple-store.svg" alt="apple-store_icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="position-sticky text-center d-flex justify-content-around py-1"
+      >
+        <span>&copy; MyShop</span> <span>Have a nice shopping!</span>
+      </div>
+    </footer>
+  </body>
+</html>

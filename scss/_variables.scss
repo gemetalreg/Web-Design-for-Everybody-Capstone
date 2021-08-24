@@ -1,0 +1,17 @@
+// navbar
+$navbar-text-my-color: #fff;
+$navbar-top-margin-bottom: 1.5rem;
+
+// collapse catalog menu
+$catalog-menu-color: rgba(255, 255, 255, 0.81);
+$catalog-menu-color-hover: rgba(255, 255, 255, 0.99);
+$catalog-menu-border: 1px solid rgba(0, 0, 0, 0.125);
+$catalog-menu-border-radius: 0px 0px 8px 8px;
+
+$card-text-color: #01069d;
+$card-price-text-color: rgb(0, 128, 0);
+
+%card-and-modal-tittle {
+  color: $card-text-color;
+  font-weight: 500;
+}
